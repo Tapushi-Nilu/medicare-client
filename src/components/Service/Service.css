@@ -1,0 +1,23 @@
+.c-body {
+  background-color: #eeeeee;
+  border-top: 5px solid #1c4c93;
+}
+.btn-s {
+  color: #0d8bf0;
+  font-weight: 700;
+  border: 1px solid #eeeeee;
+  background-color: #eeeeee;
+  margin: 15px 0px 10px 0px;
+  font-size: 17px;
+}
+.c-des {
+  font-size: 15px;
+}
+
+.c-icon {
+  display: inline-block;
+  display: flex;
+}
+.cart-ft {
+  display: inline-block;
+}

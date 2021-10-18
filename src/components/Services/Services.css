@@ -1,0 +1,29 @@
+.main-container {
+  padding: 80px 0px;
+}
+.services-title {
+  margin-bottom: 60px;
+}
+.text-b {
+  font-weight: 700;
+  color: #30b2d2;
+}
+.services-title h1 {
+  font-size: 50px;
+}
+.services-title p {
+  font-size: 20px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.services-title p::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 60px;
+  margin-left: 50%;
+  background-color: #30b2d2;
+  top: 42px;
+  left: 0;
+  transform: translate(-50%, -50%);
+}

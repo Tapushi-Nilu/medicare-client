@@ -1,0 +1,35 @@
+.main-banner {
+  /* padding-left: 0px !important;
+  padding-right: 0px !important; */
+  margin: 0;
+}
+.banner-left {
+  background-image: url(../images/bgn-testimonials.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 76px 111px;
+}
+.banner-left h1 {
+  font-size: 52px;
+  font-weight: 700;
+  color: #000000a6;
+}
+.later {
+  font-size: 82px;
+  color: #0d8bf0;
+  font-weight: 900;
+}
+.banner-btn {
+  padding: 12px 35px;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 500;
+  background: #0d8bf0;
+  border: 1px solid #0d8bf0;
+  color: #fff;
+  margin-top: 20px;
+}
+.s-img {
+  height: 544px;
+  object-fit: cover;
+}
