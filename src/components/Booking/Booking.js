@@ -5,7 +5,7 @@ const Booking = () => {
     const {serviceId} = useParams();
     return (
         <div>
-           <h1> this is booking {serviceId}</h1>
+           <h1> this is booking: {serviceId}</h1>
         </div>
     );
 };

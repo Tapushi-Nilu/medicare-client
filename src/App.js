@@ -11,6 +11,8 @@ import Services from './components/Services/Services';
 import AuthProvider from './Context/AuthProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Booking from './components/Booking/Booking';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Error from './components/error/Error';
 
 function App() {
   return (
@@ -19,15 +21,15 @@ function App() {
         <BrowserRouter>
           <Header></Header>
           <Switch>
-          <Route path='/'>
+          <Route exact path='/'>
               <Home></Home>
             </Route>
             <Route path='/home'>
               <Home></Home>
             </Route>
-            <Route path='/booking/:serviceId'>
+            <PrivateRoute path='/booking/:serviceId'>
               <Booking></Booking>
-            </Route>
+            </PrivateRoute>
             <Route path='/services'>
               <Services></Services>
             </Route>
@@ -40,10 +42,13 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
+            <Route path="*">
+              <Error></Error>
+            </Route>
           </Switch>  
           <Footer></Footer>    
         </BrowserRouter>  
-      </AuthProvider>
+        </AuthProvider>
     </div>
   );
 }
