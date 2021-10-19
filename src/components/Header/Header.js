@@ -13,14 +13,14 @@ const Header = () => {
         <div>
             <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#home"><img src={logo} alt="" /></Navbar.Brand>
+                <Navbar.Brand href="/home"><img src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
                     <NavLink className="menu" to="/home">Home</NavLink>
                     <NavLink className="menu" to="/services">Our Services</NavLink>  
                     <NavLink className="menu" to="/contact">Contact Us</NavLink> 
-                    {user.email && <span>{user.displayName}</span>}
+                    {user.email && <span className="user-name"><i className="fas fa-user-circle"></i>{user.displayName}</span>}
                     { user.email ?
                         <button className="top-btn" onClick={logOut}>Logout</button>
                             :

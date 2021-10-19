@@ -18,22 +18,26 @@ const useFirebase = () => {
     }
 
     const logOut = () => {
+        setIsLoading(true);
         signOut(auth)
         .then(() => {
             setUser({});
           })
+        .finally( () => setIsLoading(false)) 
     }
 
     useEffect( () => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
               setUser(user);
-            }
+            };
+            setIsLoading(false);
         });
     }, [])
 
     return {
         user,
+        isLoading,
         signInUsingGoogle,
         logOut
     }

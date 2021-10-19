@@ -20,17 +20,12 @@ const Booking = () => {
     console.log(search);
     return (
         <div>
-           {/* <h1> this is booking: {serviceId}</h1> */}
-           {/* <h4>{search.name}</h4>
-           <img src={search.img} alt="" />
-           <p>{search.decs}</p> */}
-
-           <Card className="w-50 mx-auto" style={{ width: '18rem', border:'1px solid #bbb' }}>
-                <Card.Img variant="top" src={search.img} />
+           <Card className="w-50 mx-auto my-5" style={{ width: '18rem', border:'1px solid #bbb' }}>
+                <Card.Img variant="top" src={search?.img} />
                 <Card.Body>
-                    <Card.Title>{search.name}</Card.Title>
+                    <Card.Title>{search?.name}</Card.Title>
                     <Card.Text>
-                    {search.decs}
+                    {search?.decs}
                     </Card.Text>
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>

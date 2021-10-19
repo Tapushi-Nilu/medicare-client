@@ -8,9 +8,9 @@ import img from '../images/Medicare-eye-clinic-logo.png'
 const Login = () => {
 
     const auth = getAuth();
-    const { signInUsingGoogle, setIsLoading } = useAuth();
+    const { signInUsingGoogle } = useAuth();
     const location = useLocation();
-    const ridirect_uri = location.state?.form || '/home';
+    const ridirect_uri = location.state?.from || '/home';
     const history = useHistory();
 
     const [email, setEmail] = useState('');
@@ -22,7 +22,7 @@ const Login = () => {
         .then(result => {
             history.push(ridirect_uri)
         })
-        .finally( () => setIsLoading(false))
+
     }
 
     const handleEmailChanged = e => {

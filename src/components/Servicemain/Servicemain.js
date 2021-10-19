@@ -11,12 +11,12 @@ const Servicemain = () => {
         .then(data=> setServices(data))
     }, []);
     return (
-        <div>
+        <div className="my-5">
             
             <div className="text-center services-title">
-                    <p>Your vision is our vision</p>
-                    <h1>A wide range of <br/> <span className="text-b">Optometry services</span></h1>
-                </div>
+                <p>Your vision is our vision</p>
+                <h1>A wide range of <br/> <span className="text-b">Optometry services</span></h1>
+            </div>
 
 
                 <Container>

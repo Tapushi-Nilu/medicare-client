@@ -14,3 +14,7 @@
   font-weight: 600;
   border: 0;
 }
+.user-name {
+  padding: 8px;
+  font-size: 20px;
+}

@@ -1,49 +1,33 @@
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+import './Register.css'
 
 const Register = () => {
-
-
-
+    const {hendleGoogleLogin} = useAuth();
 
     return (
-        <div>
-            {/* <div>
-                <h2>Create Account</h2>
+        <div className="login">
+            <div>
+                 <div className="frm-bd w-25 mx-auto">
                  <form>
+                 <h4 className="mb-3">Please Registration</h4>
+                 <input type="text" placeholder="Enter Your Name" />
+                 <br/>
                     <input type="email" placeholder="Enter Your Email" />
                     <br/>
                     <input type="password" placeholder="Enter Your Password" />
                     <br/>
-                    <input type="password" placeholder="Re-Enter Password" />
-                    <br/>
+
                     <input type="submit" value="Submit" />
                 </form>
-                <p>Already have an account? <Link to="/login">Log In</Link></p>
-            </div> */}
-    {/* 
+                 </div>
+                <p>Already have an account? <Link to="/login" className="ftm-text">Log In</Link></p>
+            </div>
 
-    <div className='login'>
-                    <div>
-                        <img src={img} alt="" />
-                    </div>
-                    <div className="from-log">
-                        <div className="frm-bd w-25 mx-auto">
-                            <form onSubmit={handleLogin}>
-                                <h4>Ragistration</h4>
-                                <input onBlur={handleEmailChanged} type="email" placeholder="Enter Your Email" required/>
-                                <br/>
-                                <input onBlur={handlePasswordChanged} type="password" placeholder="Enter Your Password" required/>
-                                <br/>
-                                <div className="text-danger">{error}</div>
-                                <input type="submit" value="Submit" />
-                            </form>
-                        </div>
-                    </div>
-                    <p>Already have an account? <Link to="/register" className="ftm-text">Login</Link></p>
-
-                    <div>---------or--------</div>
-                    <button className="frm-btm" onClick={hendleGoogleLogin}>Google Sign In</button>
-                </div> */}
+            
+            <div>---------or--------</div>
+                <button className="frm-btm" onClick={hendleGoogleLogin}>Google Sign In</button>
         </div>
     );
 };
