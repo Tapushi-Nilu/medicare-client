@@ -21,3 +21,6 @@
 .cart-ft {
   display: inline-block;
 }
+.card {
+  border: none !important;
+}

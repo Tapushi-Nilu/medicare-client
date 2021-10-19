@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import logo from '../images/Medicare-eye-clinic-logo.png'
+import logo from '../images/Medicare-eye-clinic-logo.png';
+import './Header.css'
 
 const Header = () => {
 
@@ -16,14 +17,18 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
-                    <NavLink to="/home">Home</NavLink>
-                    <NavLink to="/services">Our Services</NavLink>  
-                    <NavLink to="/contact">Contact Us</NavLink> 
+                    <NavLink className="menu" to="/home">Home</NavLink>
+                    <NavLink className="menu" to="/services">Our Services</NavLink>  
+                    <NavLink className="menu" to="/contact">Contact Us</NavLink> 
                     {user.email && <span>{user.displayName}</span>}
                     { user.email ?
-                        <button onClick={logOut}>Logout</button>
-                        :
-                        <NavLink to="/login">Login</NavLink>
+                        <button className="top-btn" onClick={logOut}>Logout</button>
+                            :
+                        
+                        <Link to="/login"><button className="top-btn">Login <i class="fa fa-arrow-circle-right mx-2"></i></button></Link>
+                        
+                        
+                        
                     } 
                 </Nav>
                 </Navbar.Collapse>

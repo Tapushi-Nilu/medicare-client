@@ -12,7 +12,6 @@ import AuthProvider from './Context/AuthProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Booking from './components/Booking/Booking';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import Error from './components/error/Error';
 
 function App() {
   return (
@@ -41,9 +40,6 @@ function App() {
             </Route>
             <Route path="/register">
               <Register></Register>
-            </Route>
-            <Route path="*">
-              <Error></Error>
             </Route>
           </Switch>  
           <Footer></Footer>    

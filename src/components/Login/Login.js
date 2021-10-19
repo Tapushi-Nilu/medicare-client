@@ -1,42 +1,82 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import useAuth from '../../hooks/useAuth';
-import './Login.css'
+import './Login.css';
+import img from '../images/Medicare-eye-clinic-logo.png'
 
 const Login = () => {
 
-    const { signInUsingGoogle } = useAuth();
+    const auth = getAuth();
+    const { signInUsingGoogle, setIsLoading } = useAuth();
     const location = useLocation();
     const ridirect_uri = location.state?.form || '/home';
     const history = useHistory();
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const hendleGoogleLogin =() => {
         signInUsingGoogle()
         .then(result => {
             history.push(ridirect_uri)
         })
+        .finally( () => setIsLoading(false))
+    }
+
+    const handleEmailChanged = e => {
+        setEmail(e.target.value);
+
+    }
+    const handlePasswordChanged = e => {
+        setPassword(e.target.value);
+
     }
 
     const handleLogin = e => {
-        console.log('regi');
         e.preventDefault();
+        console.log(email, password);
+        if (password.length < 6) {
+            setError('Password must be at least 6 characters long')
+            return;
+        }
+        createUserWithEmailAndPassword(auth, email, password)
+        .then( result => {
+            const user = result.user;
+            history.push(ridirect_uri);
+            console.log(user);
+            setError('');
+        })
+        .catch((error) => {
+            setError(error.massage)
+          });
 
     }
 
     return (
         <div>
             <div className='login'>
-                <h2>Login:</h2>
-                <form onSubmit={handleLogin}>
-                    <input type="email" placeholder="Enter Your Email" />
-                    <br/>
-                    <input type="password" placeholder="Enter Your Password" />
-                    <br/>
-                    <input type="submit" value="Submit" />
-                </form>
-                <p>new to Medi-Care? <Link to="/register">Create Account</Link></p>
+                <div>
+                    <img src={img} alt="" />
+                </div>
+                <div className="from-log">
+                    <div className="frm-bd w-25 mx-auto">
+                        <form onSubmit={handleLogin}>
+                            <h4>Login</h4>
+                            <input onBlur={handleEmailChanged} type="email" placeholder="Enter Your Email" required/>
+                            <br/>
+                            <input onBlur={handlePasswordChanged} type="password" placeholder="Enter Your Password" required/>
+                            <br/>
+                            <div className="text-danger">{error}</div>
+                            <input type="submit" value="Submit" />
+                        </form>
+                    </div>
+                </div>
+                <p>new to Medi-Care? <Link to="/register" className="ftm-text">Create Account</Link></p>
+
                 <div>---------or--------</div>
-                <button onClick={hendleGoogleLogin}>Google Sign In</button>
+                <button className="frm-btm" onClick={hendleGoogleLogin}>Google Sign In</button>
             </div>
         </div>
     );

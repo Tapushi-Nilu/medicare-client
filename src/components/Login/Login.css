@@ -2,3 +2,38 @@
   text-align: center;
   padding: 60px 0px;
 }
+.frm-bd {
+  border: 1px solid #bbb;
+  padding: 40px 20px;
+  margin: 27px 0px 27px 32px;
+}
+.frm-bd input {
+  border: 1px solid #bbb;
+  padding: 6px 36px;
+  margin: 7px 0px 7px 0px;
+  border-radius: 10px;
+  width: 100%;
+}
+.frm-bd h4 {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+}
+.frm-bd input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+}
+.frm-btm {
+  margin: 0;
+  padding: 8px 30px;
+  border: 0;
+  font-weight: 700;
+
+  background: linear-gradient(to bottom, #f7dea577, #c4bfb2d0);
+}
+.ftm-text {
+  font-size: 18px;
+  font-weight: 600;
+}

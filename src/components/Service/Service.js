@@ -19,11 +19,11 @@ const Service = (props) => {
                         </Card.Text>
 
                        <div className="cart-ft">
-                           <ul className="c-icon">
+                           {/* <ul className="c-icon">
                                <li><i class="fab fa-facebook"></i></li>
                                <li><i class="fab fa-twitter"></i></li>
                                <li><i class="fab fa-instagram"></i></li>
-                           </ul>
+                           </ul> */}
                             <Link to={`/booking/${id}`}><button className="btn-s">Read More <i class="fa fa-arrow-circle-right mx-2"></i></button></Link>
                        </div>
                     </Card.Body>

@@ -16,14 +16,14 @@ const Footer = () => {
                          <div className="mt-4">
                             <h2 className="mb-4">Contact Us</h2>
                             <h5 className="mt-2">Visit us anytime</h5>
-                            <p><i class="fas fa-map-marker-alt"></i>  Level-4, 34, Awal Centre, Banani,</p>
+                            <p><i class="fas fa-map-marker-alt ft-icon"></i>  Level-4, 34, Awal Centre, Banani,</p>
                             <p>Dhaka, Bangladesh</p>
 
                             <h5 className="mt-4">Call Us</h5>
-                            <p className=""><i class="fas fa-phone-alt"></i> +1800-208-6835</p>
+                            <p className=""><i class="fas fa-phone-alt ft-icon"></i> +1800-208-6835</p>
 
                             <h5 className="mt-2">Send us an email</h5>
-                            <p className="ml-2"><i class="fas fa-envelope"></i>  Official: abc@gmail.com</p>
+                            <p className="ml-2"><i class="fas fa-envelope ft-icon"></i>  Official: abc@gmail.com</p>
                         </div>
                     </Col>
                     <Col>
@@ -38,17 +38,17 @@ const Footer = () => {
                             </ul>
                         </div>
                     </Col>
-                    <Col><div className="mt-4">
-                        <h2 className="mb-4">Facebook</h2>
-                            <h5 className="mt-2">Visit us anytime</h5>
-                            <p><i class="fab fa-facebook"></i>  Level-4, 34, Awal Centre, Banani,</p>
-                            <p>Dhaka, Bangladesh</p>
+                    <Col>
+                    <div className="mt-4 footer-right">
+                        <h2 className="mb-4">Social Network</h2>
+                            <h5 className="mt-2">Facebook</h5>
+                            <p><i class="fab fa-facebook ft-icon"></i>www.facebook.com/medicarehgf</p>
 
-                            <h5 className="mt-4">Twitter</h5>
-                            <p className=""><i class="fab fa-twitter"></i> +1800-208-6835</p>
+                            <h5 className="mt-2">Twitter</h5>
+                            <p className=""><i class="fab fa-twitter ft-icon"></i>#WeCare</p>
 
                             <h5 className="mt-2">Instagram</h5>
-                            <p className="ml-2"><i class="fab fa-instagram"></i>  Official: abc@gmail.com</p>
+                            <p className="ml-2"><i class="fab fa-instagram ft-icon"></i>www.instagram.com/medicarebvd</p>
                         </div>
                     </Col>
                 </Row>

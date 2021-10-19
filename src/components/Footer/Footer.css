@@ -5,3 +5,17 @@
 .ft-img {
   text-align: center;
 }
+.ft-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #2196f329;
+  line-height: 39px !important;
+  text-align: center;
+  border-radius: 50%;
+  background: #30b2d230;
+  color: #1c4c93;
+  margin-right: 20px;
+}
+.footer-right h5 {
+  /* margin-left: 48px; */
+}
