@@ -1,11 +1,11 @@
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from '@firebase/auth';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Register.css'
 
 const Register = () => {
-    const {signInUsingGoogle} = useAuth();
+    const {user, signInUsingGoogle} = useAuth();
 
     const auth = getAuth();
 
@@ -13,6 +13,9 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+
+
+    const history = useHistory();
 
     const handleName = e =>  {
         setName(e.target.value)
@@ -27,8 +30,16 @@ const Register = () => {
 
     }
 
+    const handleSignInUsingGoogle = () => {
+        signInUsingGoogle();
+        if (user.email || user.displayName) {
+            history.push('/home');  
+        }
+    }
+
     const handleLogin = e => {
         e.preventDefault();
+
         console.log(email, password);
         if (password.length < 6) {
             setError('Password must be at least 6 characters long')
@@ -37,6 +48,7 @@ const Register = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then( result => {
             const user = result.user;
+            history.push('/home')
             console.log(user);
             setError('');
             setUserName();
@@ -58,15 +70,15 @@ const Register = () => {
             <div>
                  <div className="frm-bd w-25 mx-auto">
                  <form onSubmit={handleLogin}>
-                 <h4 className="mb-3">Please Registration</h4>
-                 <input onBlur={handleName} type="text" placeholder="Your Name" />
-                 <br/>
+                    <h4 className="mb-3">Please Registration</h4>
+                    <input onBlur={handleName} type="text" placeholder="Your Name" />
+                     <br/>
                     <input onBlur={handleEmailChanged} type="email" placeholder="Enter Your Email" />
                     <br/>
                     <input onBlur={handlePasswordChanged} type="password" placeholder="Enter Your Password" />
                     <br/>
                     <div className="text-danger">{error}</div>
-                    <input type="submit" value="Submit" />
+                    <input type="submit" value="Register" />
                 </form>
                  </div>
                 <p>Already have an account? <Link to="/login" className="ftm-text">Log In</Link></p>
@@ -74,7 +86,7 @@ const Register = () => {
 
             
             <div>---------or--------</div>
-                <button className="frm-btm" onClick={signInUsingGoogle}>Google Sign In</button>
+                <button className="frm-btm" onClick={handleSignInUsingGoogle}>Google Sign In</button>
         </div>
     );
 };
