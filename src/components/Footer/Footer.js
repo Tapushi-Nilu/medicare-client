@@ -13,7 +13,7 @@ const Footer = () => {
                 <hr/>
             <Container>
                 <Row>
-                    <Col>
+                    <Col xs={12} md={4}>
                          <div className="mt-4">
                             <h2 className="mb-5">Contact Us</h2>
                              
@@ -44,7 +44,7 @@ const Footer = () => {
                             
                         </div>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={4}>
                         <div>
                         <h2 className="m-4 mb-5">About Us</h2>   
                         <ul className="footer-md">
@@ -56,7 +56,7 @@ const Footer = () => {
                         </ul>
                         </div>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={4}>
                     <div className="mt-4 footer-right">
                         <h2 className="mb-5">Social Network</h2>
 

@@ -6,6 +6,7 @@
   border: 1px solid #bbb;
   padding: 40px 20px;
   margin: 27px 0px 27px 32px;
+  width: 25%;
 }
 .frm-bd input {
   border: 1px solid #bbb;
@@ -36,4 +37,24 @@
 .ftm-text {
   font-size: 18px;
   font-weight: 600;
+}
+
+/* responsive */
+/* 
+Small devices (portrait phones,less then 576px)
+*/
+
+@media (max-width: 575.98px) {
+  .frm-bd {
+    width: 100%;
+  }
+}
+/* 
+Small devices (landscape phones, 576px and up)
+  */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .frm-bd {
+    width: 100%;
+  }
 }

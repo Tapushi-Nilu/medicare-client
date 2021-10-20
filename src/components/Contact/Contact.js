@@ -16,7 +16,7 @@ const Contact = () => {
             <div className="">
              <Container>
                 <Row>
-                    <Col>
+                    <Col xs={12} md={4}>
                         <div className="d-flex item-c">
                             <h2><i className="fas fa-headphones-alt"></i></h2>
                             <div>
@@ -25,7 +25,7 @@ const Contact = () => {
                              </div>   
                         </div>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={4}>
                     
                     <div className="d-flex item-c">
                             <h2><i className="fas fa-map-marker-alt"></i></h2>
@@ -35,13 +35,12 @@ const Contact = () => {
                              </div>   
                         </div>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={4}>
                     <div className="d-flex item-c">
                             <h2><i class="far fa-envelope-open"></i></h2>
                             <div>
                                 <h4>Email</h4>
-                                <p>info-example@optico.com <br/>
-support@optico.com</p>
+                                <p>info-example@optico.com <br/>support@optico.com</p>
                              </div>   
                         </div>
                     </Col>

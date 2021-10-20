@@ -61,7 +61,7 @@ const Login = () => {
                     <img src={img} alt="" />
                 </div>
                 <div className="from-log">
-                    <div className="frm-bd w-25 mx-auto">
+                    <div className="frm-bd mx-auto">
                         <form onSubmit={handleLogin}>
                             <h4>Login</h4>
                             <input onBlur={handleEmailChanged} type="email" placeholder="Enter Your Email" required/>

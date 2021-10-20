@@ -31,3 +31,38 @@
   height: 545px;
   object-fit: cover;
 }
+
+/* responsive */
+/* 
+Small devices (portrait phones,less then 576px)
+*/
+
+@media (max-width: 575.98px) {
+  .banner-left {
+    padding: 77px 15px;
+  }
+  .later {
+    font-size: 68px;
+  }
+  .banner-left h1 {
+    font-size: 46px;
+  }
+  .services-title h1 {
+    font-size: 47px;
+  }
+  .contact-top h1 {
+    font-size: 30px;
+  }
+  .contact-top p {
+    padding: 8px 0px;
+  }
+}
+/* 
+Small devices (landscape phones, 576px and up)
+  */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .contact-top p {
+    padding: 8px 0px;
+  }
+}

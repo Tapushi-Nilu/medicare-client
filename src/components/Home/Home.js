@@ -12,7 +12,7 @@ const Home = () => {
       <div className="home-p">
       <Container>
                 <Row>
-                    <Col>
+                    <Col xs={12} md={4}>
                         <div className="d-flex item">
                             <h2>01.</h2>
                             <div>
@@ -21,7 +21,7 @@ const Home = () => {
                              </div>   
                         </div>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={4}>
                     
                     <div className="d-flex item">
                             <h2>02.</h2>
@@ -31,7 +31,7 @@ const Home = () => {
                              </div>   
                         </div>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={4}>
                     <div className="d-flex item">
                             <h2>03.</h2>
                             <div>

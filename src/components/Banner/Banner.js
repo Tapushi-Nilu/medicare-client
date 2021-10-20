@@ -11,7 +11,7 @@ const Banner = () => {
 
            <Container fluid className="main-banner">
                 <Row>
-                    <Col className="m-0 p-0">
+                    <Col xs={12} md={6} className="m-0 p-0">
                         <div className="banner-left">
                             <h1><span className="later">O</span>ptometrist & Eye Care Specialist Services</h1>
                             <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy proposition.</p>
@@ -19,7 +19,7 @@ const Banner = () => {
                         </div>
                     </Col>
 
-                    <Col className="m-0 p-0">
+                    <Col xs={12} md={6} className="m-0 p-0">
                         <Carousel>
                             <Carousel.Item>
                                 <img
