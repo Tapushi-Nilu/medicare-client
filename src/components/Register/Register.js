@@ -68,7 +68,7 @@ const Register = () => {
     return (
         <div className="login">
             <div>
-                 <div className="frm-bd w-25 mx-auto">
+                 <div className="frm-bd mx-auto">
                  <form onSubmit={handleLogin}>
                     <h4 className="mb-3">Please Registration</h4>
                     <input onBlur={handleName} type="text" placeholder="Your Name" />
