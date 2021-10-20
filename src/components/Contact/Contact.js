@@ -50,7 +50,8 @@ const Contact = () => {
 
 
             <div>
-            <Container className="contact-bt">
+                <div className="contact-bt">
+                <Container>
                 <Row>
                     <Col sm={5}>
                         <img src={img} alt="" />                       
@@ -78,6 +79,7 @@ const Contact = () => {
                     </Col>
                 </Row>
             </Container>
+                </div>
             </div>
         </>
     );

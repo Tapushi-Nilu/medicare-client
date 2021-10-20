@@ -90,7 +90,7 @@ const Footer = () => {
                 </Row>
             </Container>
         </div>
-                   <div className="text-center p-3 bg-dark text-white">Copyright by 2018. All rights reserved.</div>
+                   <div className="text-center p-3 bg-dark text-white">Copyright by 2021. All rights reserved.</div>
       
       </>
     );

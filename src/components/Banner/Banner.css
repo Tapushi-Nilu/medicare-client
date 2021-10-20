@@ -5,7 +5,7 @@
   background-image: url(../images/bgn-testimonials.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 77px 111px;
+  padding: 55px 111px;
 }
 .banner-left h1 {
   font-size: 52px;
@@ -28,7 +28,7 @@
   margin-top: 20px;
 }
 .s-img {
-  height: 545px;
+  height: 501px;
   object-fit: cover;
 }
 
