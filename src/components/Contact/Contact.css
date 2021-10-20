@@ -69,8 +69,32 @@
   padding-right: 20px;
   font-size: 50px;
 }
-/* .item-c h2 {
-  color: #7ad03a;
-  padding-right: 20px;
-  font-size: 40px;
-} */
+
+/* responsive */
+/* 
+Small devices (portrait phones,less then 576px)
+*/
+
+@media (max-width: 575.98px) {
+  .contact-bt {
+    box-shadow: none;
+    margin: 0px;
+  }
+
+  .contact-top h1 {
+    font-size: 30px;
+  }
+  .contact-top p {
+    padding: 8px 0px;
+  }
+}
+/* 
+Small devices (landscape phones, 576px and up)
+  */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .contact-bt {
+    box-shadow: none;
+    margin: 0px;
+  }
+}

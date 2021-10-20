@@ -8,7 +8,7 @@
   padding: 55px 111px;
 }
 .banner-left h1 {
-  font-size: 52px;
+  font-size: 46px;
   font-weight: 700;
   color: #000000a6;
 }
@@ -28,7 +28,7 @@
   margin-top: 20px;
 }
 .s-img {
-  height: 501px;
+  height: 487px;
   object-fit: cover;
 }
 
@@ -42,10 +42,10 @@ Small devices (portrait phones,less then 576px)
     padding: 77px 15px;
   }
   .later {
-    font-size: 68px;
+    font-size: 50px;
   }
   .banner-left h1 {
-    font-size: 46px;
+    font-size: 33px;
   }
   .services-title h1 {
     font-size: 47px;
